@@ -1,0 +1,59 @@
+@import './base/general';
+.wrapper{
+    background: url('../img/bg.jpg') repeat 0 0;
+    background-size: 100px 100px;
+}
+.list-products{
+    padding: 60px 0;
+    &__inner{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap; 
+    }
+    &__item{
+        display: block;
+        width: 220px;
+        margin: 0 10px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        transition: transform .2s;
+        &:hover{
+            transform: scale(1.05);
+            // box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);    
+        }
+    }
+    &__img{
+        height: 220px;
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+        padding: 15px 20px;
+        background-color: $c_bg;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    &__name{
+        font-family: 'Roboto', sans-serif;
+        color: $c_blue;
+        font-size: 18px;
+        text-align: center;
+    }
+    &__price{
+        font-family: 'Roboto', sans-serif;
+        font-size: 22px;
+        color: #000;
+        font-weight: 800;
+        text-align: center;
+    }
+}
